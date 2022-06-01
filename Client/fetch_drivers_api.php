@@ -14,14 +14,15 @@ if (empty($token)) {
 $json = file_get_contents('php://input');
 $data = json_decode($json);
 
+$hint = $data->hint;
 
+if(empty($hint)){
     //fetching all records in the database drivers table
     $query = "SELECT * FROM driver WHERE status='OPEN' ";
     $result = $db->query($query);
     if ($result->rowCount() > 0) {
         if ($result = $db->query($query)) {
             $posts_arr = array();
-
             while ($user = $result->fetch(PDO::FETCH_OBJ)) {
                 $post_item = array(
                         'phone' => $user->phone,
@@ -41,8 +42,39 @@ $data = json_decode($json);
         }
     } else {
         echo json_encode(array(
-            'message' => "No driver records at the moment  "
+            'message' => "No driver records at the moment "
         ));
     }
+}else{
+    //fetching all records in the database drivers table
+    $query = "SELECT * FROM driver WHERE status='OPEN' AND location LIKE '%$hint%'";
+    $result = $db->query($query);
+    if ($result->rowCount() > 0) {
+        if ($result = $db->query($query)) {
+            $posts_arr = array();
+            while ($user = $result->fetch(PDO::FETCH_OBJ)) {
+                $post_item = array(
+                        'phone' => $user->phone,
+                        'licensecategory' => $user->licensecategory,
+                        'email' => $user->email,
+                        'location' => $user->location,
+                        'licensepicurl' => $user->licensepicurl,
+                        'price' => $user->price,
+                        'username' => $user->username,
+                        'profilepicurl' =>$user->profilepicurl,
+                        'id' => $user->id,
+                );
+
+                array_push($posts_arr, $post_item);
+            }
+            echo json_encode($posts_arr);
+        }
+    } else {
+        echo json_encode(array(
+            'message' => "No driver matching the location provided"
+        ));
+    }
+}
+
 
 }
