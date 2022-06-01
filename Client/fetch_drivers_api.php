@@ -31,6 +31,7 @@ if(empty($hint)){
                         'location' => $user->location,
                         'licensepicurl' => $user->licensepicurl,
                         'price' => $user->price,
+                        'years' => $user->years,
                         'username' => $user->username,
                         'profilepicurl' =>$user->profilepicurl,
                         'id' => $user->id,
