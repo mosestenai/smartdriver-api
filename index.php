@@ -8,5 +8,6 @@
 </head>
 <body>
     <h2>Smart driver listener home page</h2>
+    <img src="images/smarticon.png" height="200" width="200" />
 </body>
 </html>
