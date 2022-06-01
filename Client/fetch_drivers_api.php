@@ -30,6 +30,7 @@ $data = json_decode($json);
                         'location' => $user->location,
                         'licensepicurl' => $user->licensepicurl,
                         'price' => $user->price,
+                        'username' => $user->username,
                         'profilepicurl' =>$user->profilepicurl,
                         'id' => $user->id,
                 );
