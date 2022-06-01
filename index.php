@@ -9,7 +9,7 @@
 <body>
     <h2>Smart driver test api</h2>
     <?php 
-    echo 'The username is: ' .$_ENV["PORT"] . '!';
+    echo 'The username is: ' .$_ENV["NAME"] . '!';
     ?>
 </body>
 </html>
