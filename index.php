@@ -7,6 +7,6 @@
     <title>Smart driver api</title>
 </head>
 <body>
-    <h2>Smart driver</h2>
+    <h2>Smart driver test api</h2>
 </body>
 </html>
