@@ -27,9 +27,10 @@ $data = json_decode($json);
                         'phone' => $user->phone,
                         'licensecategory' => $user->licensecategory,
                         'email' => $user->email,
-                        'type' => $user->room,
+                        'location' => $user->location,
                         'licensepicurl' => $user->licensepicurl,
                         'price' => $user->price,
+                        'profilepicurl' =>$user->profilepicurl,
                         'id' => $user->id,
                 );
 
