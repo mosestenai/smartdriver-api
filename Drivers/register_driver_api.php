@@ -38,9 +38,6 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
         $username = $data->username;
 
 
-
-
-
         if (empty($email) or empty($years) or empty($price)) {
             echo json_encode(array(
                 'message' => "Fill all fields"
