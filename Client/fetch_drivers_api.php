@@ -59,6 +59,7 @@ if(empty($hint)){
                         'email' => $user->email,
                         'location' => $user->location,
                         'licensepicurl' => $user->licensepicurl,
+                        'years' => $user->years,
                         'price' => $user->price,
                         'username' => $user->username,
                         'profilepicurl' =>$user->profilepicurl,
