@@ -33,6 +33,7 @@ if(empty($hint)){
                         'price' => $user->price,
                         'years' => $user->years,
                         'username' => $user->username,
+                        'rating' => $user->rating,
                         'profilepicurl' =>$user->profilepicurl,
                         'id' => $user->id,
                 );
