@@ -34,6 +34,7 @@ if(empty($hint)){
                         'years' => $user->years,
                         'username' => $user->username,
                         'rating' => $user->rating,
+                        'trips' => $user->trips,
                         'profilepicurl' =>$user->profilepicurl,
                         'id' => $user->id,
                 );
@@ -63,6 +64,8 @@ if(empty($hint)){
                         'licensepicurl' => $user->licensepicurl,
                         'years' => $user->years,
                         'price' => $user->price,
+                        'rating' => $user->rating,
+                        'trips' => $user->trips,
                         'username' => $user->username,
                         'profilepicurl' =>$user->profilepicurl,
                         'id' => $user->id,

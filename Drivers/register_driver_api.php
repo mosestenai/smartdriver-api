@@ -54,8 +54,8 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
                     'message' => "driver already exits"
                 ));
             } else {
-                $query = "INSERT INTO driver (email,phone,licensecategory,years,location,price,status,username) 
-        VALUES('$email','$phone','$licensecategory','$years','$location','$price','$status','$username')";
+                $query = "INSERT INTO driver (email,phone,licensecategory,years,location,price,status,username,trips) 
+        VALUES('$email','$phone','$licensecategory','$years','$location','$price','$status','$username','0')";
                 $db->query($query) or die($db->error);
                 http_response_code($response_code = 200);
 

@@ -32,10 +32,12 @@ if (empty($token)) {
         if ($results->rowCount() == 1) {
             $user = $results->fetch(PDO::FETCH_OBJ);
             $ratingfromdb = $user->rating;
+            $previoustrip = $user->trips;
+            $finaltrips = $previoustrip + 1;
 
             $finalrating = round($ratingfromdb + $rating);
 
-            $update = "UPDATE driver SET rating='$finalrating' WHERE username='$username'";
+            $update = "UPDATE driver SET rating='$finalrating',trips='$finaltrips' WHERE username='$username'";
             $result = $db->query($update);
             if ($result->rowCount() > 0) {
                 echo json_encode(array(
