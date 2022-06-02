@@ -48,7 +48,7 @@ if (empty($token)) {
             }
         } else {
             echo json_encode(
-                array('message' => 'invalid phone number')
+                array('message' => 'You are not a registered driver or no requests have been made')
             );
             exit();
         }
