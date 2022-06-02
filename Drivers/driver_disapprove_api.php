@@ -29,7 +29,7 @@ if (empty($token)) {
         if($results){
             echo json_encode(
                 array(
-                    'success' => 'You canceled request successfully',
+                    'success' => 'Client request canceled successfully.Await other requests',
                     )
             );
             exit();
