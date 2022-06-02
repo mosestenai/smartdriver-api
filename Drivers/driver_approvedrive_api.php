@@ -30,7 +30,7 @@ if (empty($token)) {
         if($results){
             echo json_encode(
                 array(
-                    'success' => 'You accepted request successfully',
+                    'success' => 'Client request successfully',
                     'clientphone' => $clientphone
                     )
             );
