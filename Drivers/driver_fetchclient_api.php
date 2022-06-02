@@ -25,7 +25,7 @@ if (empty($token)) {
             'message' => "Fill all fields"
         ));
     } else {
-        $query = "SELECT * FROM driver WHERE phone='$phone' LIMIT 1";
+        $query = "SELECT * FROM driver WHERE phone='$phone' AND clientphone IS NOT NULL LIMIT 1";
         $results = $db->query($query);
 
         if ($results->rowCount() == 1) {

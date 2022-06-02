@@ -23,7 +23,7 @@ if (empty($token)) {
             'message' => "Empty phone number"
         ));
     } else {
-        $query = "UPDATE driver SET driverstatus='',status='OPEN' WHERE phone = '$phone'";
+        $query = "UPDATE driver SET driverstatus='',status='OPEN',clientphone='' WHERE phone = '$phone'";
         $results = $db->query($query);
 
         if($results){
