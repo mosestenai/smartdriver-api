@@ -14,20 +14,20 @@ if (empty($token)) {
     $data = json_decode($json);
 
 
-    $driverphone =  $data->driverphone;
+    $driverusername =  $data->driverusername;
     $clientphone = $data->clientphone;
 
 
 
 
 
-    if (empty($driverphone)) {
+    if (empty($driverusername)) {
 
         echo json_encode(array(
             'message' => "provide driver phone number to monitor location"
         ));
     } else {
-        $query = "SELECT * FROM driver WHERE phone='$driverphone'  LIMIT 1";
+        $query = "SELECT * FROM driver WHERE username='$driverusername'  LIMIT 1";
         $results = $db->query($query);
 
         if ($results->rowCount() == 1) {
